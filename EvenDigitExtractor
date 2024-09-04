@@ -1,0 +1,90 @@
+package p125;
+
+import java.util.Scanner;
+
+	public class EvenDigitsExtractor {
+
+	    public static void main(String[] args) {
+
+	        Scanner scanner = new Scanner(System.in);
+
+	        System.out.print("Enter a number: ");
+
+	        String input = scanner.nextLine();
+
+	        String evenDigits = extractEvenDigits(input);
+
+	        if (evenDigits.isEmpty()) {
+
+	            System.out.println("No even digits found.");
+
+	        } else {
+
+	            System.out.println("Even digits: " + evenDigits); }
+
+	        scanner.close();   }
+
+	    public static String extractEvenDigits(String number) {
+
+	        StringBuilder evenDigits = new StringBuilder();
+
+	        for (char ch : number.toCharArray()) {
+
+	            if (Character.isDigit(ch)) {
+
+	                int digit = Character.getNumericValue(ch);
+
+	                if (digit % 2 == 0) {
+
+	                    evenDigits.append(digit);
+
+	                } }}
+
+	        return evenDigits.toString();
+
+	    }}
+
+
+	public class EvenDigitsExtractor {
+
+	    public static void main(String[] args) {
+
+	        Scanner scanner = new Scanner(System.in);
+
+	        System.out.print("Enter a number: ");
+
+	        String input = scanner.nextLine();
+
+	        String evenDigits = extractEvenDigits(input);
+
+	        if (evenDigits.isEmpty()) {
+
+	            System.out.println("No even digits found.");
+
+	        } else {
+
+	            System.out.println("Even digits: " + evenDigits); }
+
+	        scanner.close();   }
+
+	    public static String extractEvenDigits(String number) {
+
+	        StringBuilder evenDigits = new StringBuilder();
+
+	        for (char ch : number.toCharArray()) {
+
+	            if (Character.isDigit(ch)) {
+
+	                int digit = Character.getNumericValue(ch);
+
+	                if (digit % 2 == 0) {
+
+	                    evenDigits.append(digit);
+
+	                } }}
+
+	        return evenDigits.toString();
+
+	    }}
+
+
