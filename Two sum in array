@@ -1,0 +1,38 @@
+import java.io.*;
+import java.util.*;
+
+class Solution{
+    public int[] twoSum(int[] nums, int target) {
+        //Write code here
+        HashMap<Integer,Integer> numToIndex = new HashMap<>();
+        for(int i=0;i<nums.length;i++)
+        {
+            int complement=target - nums[i];
+            if(numToIndex.containsKey(complement)){
+                return new int[]{numToIndex.get(complement),i};
+                }
+                numToIndex.put(nums[i],i);
+        }
+                return null;
+            }
+        }
+
+public class Main {
+
+    public static void main(String args[]) {
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+        int target = input.nextInt();
+        int[] nums = new int[n];
+        for(int i = 0; i < n; i++){
+            nums[i] = input.nextInt();
+        }
+        
+        Solution obj = new Solution();
+        int[] arr = obj.twoSum(nums,target);
+        
+        System.out.print(arr[0]);
+        System.out.print(' ');
+        System.out.print(arr[1]);
+    }
+}
