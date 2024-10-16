@@ -1,0 +1,30 @@
+import java.util.*;
+
+class Solution {
+   static boolean areAnagram(String c1, String c2) {
+       //Write your code here
+       if(c1.length()!=c2.length()){
+           return false;
+       }
+       char[] arr1=c1.toCharArray();
+       char[] arr2=c2.toCharArray();
+       Arrays.sort(arr1);
+       Arrays.sort(arr2);
+	 
+	 return Arrays.equals(arr1,arr2);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str1 = sc.nextLine();
+        String str2 = sc.nextLine();
+        Solution Obj = new Solution();
+        
+        if (Obj.areAnagram(str1, str2))
+            System.out.println("Yes");
+        else
+            System.out.println("No");
+    }
+}
