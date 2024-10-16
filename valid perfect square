@@ -1,0 +1,39 @@
+import java.util.*;
+import static java.lang.Math.ceil;
+
+class AlgoTutor {
+    public void isPerfectSquare(int n) {
+        // Write your code here
+        int min=1;
+        int max = n/2;
+        while(min <= max)
+        {
+        int mid = (min + max) / 2;
+        if(mid * mid == n)
+        {
+            System.out.println("YES");
+            return;
+        }
+        if(mid * mid > n){
+            max = mid - 1;
+        }
+        else {
+            min = mid + 1;
+        }
+        
+
+      }
+      
+      System.out.println("No");
+  }
+    }
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        AlgoTutor Obj = new AlgoTutor();
+        Obj.isPerfectSquare(n);
+
+    }
+}
