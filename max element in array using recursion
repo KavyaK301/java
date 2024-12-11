@@ -1,0 +1,44 @@
+package p125;
+
+public class maxrecursion {
+
+	public static void main(String[] args) {
+		int[] arr= {11,8,13,4,5};
+
+		 int maxnum=maximum(arr,0);
+
+		 System.out.println(maxnum);
+
+	 }
+
+	 public static int maximum(int[] arr,int i) {
+
+		 if(i==arr.length-1) {
+
+			 return arr[i];
+
+		 }
+
+		 int max=maximum(arr,i+1);
+
+		 if(arr[i]>max) {
+
+			 return arr[i];
+
+		 }
+
+		 else {
+
+			 return max;
+
+		 }
+
+	 }
+
+	}
+
+	   
+ 
+
+
+
